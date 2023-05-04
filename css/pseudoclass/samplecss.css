@@ -1,0 +1,33 @@
+.pic{
+    width: 250px;
+    height: 300px;
+
+}
+.pic:hover{
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    border-right:5px solid blue;
+    border-left: 5px solid blue;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    background: black;
+}
+.pic:active{
+    border-top: 5px solid blue;
+    border-bottom: 5px solid blue;
+    border-right:5px solid red;
+    border-left: 5px solid red;
+    background: green;
+}
+.par{
+    text-align: center;
+    background-color: #faca72;
+}
+.par:hover{
+    background-color: #5d7723;
+}
+.par:active{
+    background-color: #faca72;
+    color: blue;
+}

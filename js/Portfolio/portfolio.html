@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function mes() {
+            alert("this is an example of Onclick event")
+        }
+        function mes2() {
+            alert("this is an example of onmouseover event")
+        }
+        function mes3() {
+            alert("this is an example of onmouseouut event")
+        }
+        function mes4(x){
+            document.bgColor=x;
+        }
+    </script>
+</head>
+<body>
+    <div class="top">
+        <nav>
+            <img src="Screenshot 2023-03-29 004423.png" class="logo" onmouseout="mes3()">
+            <ul onmouseover="mes2()">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </nav>
+        <div class="pic">
+            <img src="Screenshot_20230322_124315-removebg-preview (1).png" class="me" onclick="mes()" >
+        </div>
+        <div class="par" >
+            <h1 >JUN JUN B. ELPA</h1>
+            <p >A resident of Barangay Alinaya, Pidigan, Abra
+            <br>Currently enrolled at the Abra State Institute of Sciences and Technology (ASIST)
+            <br>soon to be University of Abra (UA) and currently pursuing an Information Technology (IT) Track
+        </p>
+        <a href="#" >EXPLORE</a>
+        </div>
+    </div>
+    <center>
+        <select onchange="mes4(this.value)">
+            <option value="">SELECT FONT COLOR</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        </center>
+</body>
+</html>

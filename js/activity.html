@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            width: 100%;
+            height: 90vh;
+            background: #e3f9ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 5px solid #44ee55;
+            border-bottom: 5px solid #44ee55;
+        }
+        .btn{
+            background: #44ee55;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+        }
+        .inp{
+            background-color: #44ee55;
+            font-size: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <center >
+        <h1>PERSONAL INFO</h1>
+        <table>
+            First Name: <input id="myText" class="inp" onkeydown="count()"><br><br>
+            Last Name: <input id="myText" class="inp" onkeydown="count()"><br><br>
+            Birth Year: <input id="date" class="inp"><br><br>
+            <button onclick="mes()" class="btn">SUBMIT</button><br><br>
+            First Name is pressed <span id="countnum" style="color: red; font-weight: bolder;">0</span> Times<br>
+            Your Age is <span id="date1" style="color: red; font-weight: bolder;">0</span>
+            <a href="../index.html" class="btn">BACK TO HOMEPAGE</a>
+        </table>
+    </center>
+    <script>
+      function count(){
+          var countnum = document.getElementById("countnum").innerHTML;
+          document.getElementById("countnum").innerHTML = Number (countnum) + 1;
+      }
+        function mes() {
+            alert("Your Information is Saved!")
+        }
+        var date = document.getElementById("date");
+        var date1 = document.getElementById("date1");
+        var y = 2023
+
+        date.addEventListener("keyup", function () {
+            var val = date.value;
+            date1.innerText = (y - val);
+        });
+    </script>
+</body>
+
+</html>

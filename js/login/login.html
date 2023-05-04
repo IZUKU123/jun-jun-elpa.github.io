@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            background: #e3ffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login{
+            border-top: 5px solid  lightgreen;
+            border-left: 5px solid  lightgreen;
+            border-bottom: 5px solid  lightgreen;
+            border-right: 5px solid lightgreen;
+            padding: 50px;
+            border-style:groove;
+            border-radius: 30px;
+            background: black;
+        }
+        .par{
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .par1{
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace; 
+            margin-top: -50px;
+        }
+        .btn{
+            background: #44ee55;
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            border-radius:10px;
+            border:solid  #44ee55;
+        }
+        .inp{
+            background: #44ee55;
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            border-radius:10px; 
+        }
+        .btn:hover{
+            background-color: black;
+            color: #44ee55;
+        }
+        .pic{
+            width: 300px;
+            height: 200px;
+            margin-top: -50px;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <div class="login">
+        <center><img class="pic" src="One Piece   Anime HD Wallpapers   Design Hey Design Hey   Creative.jpg">
+        <p class="par1">Login</p></center>
+        <p class="par">Username:<br><input type="text" id="uname"  class="inp">  <br><br></p>
+        <p class="par">Password:<br><input type="password" id="pword"  class="inp">  <br><br></p>
+        <center><button class="btn" id="login" onclick="check()">LOGIN</button> <br><br>
+        <a href="../../index.html" class="btn">BACK TO HOMEPAGE</a></center>
+    </div>
+    <script>
+        function check(){
+            var Username = document.getElementById("uname").value;
+            var Password = document.getElementById("pword").value;
+            var Uname = 'izukujunjun';
+            var Pword = 'plusultra';
+
+            
+            if ((Username == "") && (Password == "")){
+                alert("All Textboxes are empty");
+            } else if ((Username == "") && (Password == Password)){
+                    alert("Username is Empty");
+                }
+            else if ((Username == Username)&&(Password == "")){
+                alert("Password is Empty");
+            }
+            else if((Username == Uname)&&(Password == Pword)){
+                alert("Loggged In successfully");
+            }
+            else if((Username == Uname)&&(Password != Pword)){
+                alert("Incorrect Password");
+            }
+            else if((Username != Uname) && (Password == Pword)){
+                alert("Incorrect Username");
+            }
+            else{
+                alert("Incorrect Username and Password");
+            }
+        }
+    </script>
+</body>
+</html>
